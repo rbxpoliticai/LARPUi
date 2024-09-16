@@ -6,6 +6,9 @@ This documentation covers the usage of the LARP UI Library.
 ## Booting the Library
 ```lua
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxpoliticai/LARPUi/refs/heads/main/Main.lua", true))()
+library:Version("1.0")
+Library:Name("Larp Hub")
+
 ```
 
 ## Creating a Window
