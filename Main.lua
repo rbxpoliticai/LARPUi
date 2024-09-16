@@ -935,20 +935,17 @@ function library:Init(name)
     end
 end
 
-function library:Name(newName)
-    if WEBSITE and WEBSITE:IsA("TextLabel") then
-        WEBSITE.Text = newName or "Larp Library"
-    else
-        warn("WEBSITE TextLabel not found or invalid")
-    end
-end
-
-function library:Version(versionText)
-    if LABEL2 and LABEL2:IsA("TextLabel") then
-        LABEL2.Text = versionText or "1.0"
-    else
-        warn("LABEL2 TextLabel not found or invalid")
-    end
+function library:Settings(Name, Version, Color)
+        WEBSITE.Text = Name or "Larp Library"
+	LABEL2.Text = Version or "1.0"
+	linedecoDOWNER.BorderColor3 = Color
+	DOWNER.BorderColor3 = Color
+	linedecoupper.BackgroundColor3 = Color
+	linedecoupper.BorderColor3 = Color
+	Upper.BorderColor3 = Color
+	BG.BorderColor3 = Color
+	F_line.BackgroundColor3 = Color
+	F_line.BorderColor3 = Color
 end
 
 function library:AddWindow(text)
