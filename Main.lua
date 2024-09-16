@@ -935,25 +935,6 @@ function library:Init(name)
     end
 end
 
-function library:Settings(Name, Version, Color)
-    WEBSITE.Text = Name or "Larp Library"
-    LABEL2.Text = Version or "1.0"
-    linedecoDOWNER.BorderColor3 = Color
-    DOWNER.BorderColor3 = Color
-    linedecoupper.BackgroundColor3 = Color
-    linedecoupper.BorderColor3 = Color
-    Upper.BorderColor3 = Color
-    BG.BorderColor3 = Color
-    
-    -- Check if F_line exists before setting its properties
-    if F_line then
-        F_line.BackgroundColor3 = Color
-        F_line.BorderColor3 = Color
-    else
-        warn("F_line is not defined.")
-    end
-end
-
 function library:AddWindow(text)
 	local sec = {}
 	text=text or 'Not Def'
@@ -2276,7 +2257,27 @@ function library:AddWindow(text)
 			wait()
 			_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 			UpdateMainSize(nil,true)
-		end			
+		end
+
+		function library:Settings(Name, Version, Color)
+		    WEBSITE.Text = Name or "Larp Library"
+		    LABEL2.Text = Version or "1.0"
+		    linedecoDOWNER.BorderColor3 = Color
+		    DOWNER.BorderColor3 = Color
+		    linedecoupper.BackgroundColor3 = Color
+		    linedecoupper.BorderColor3 = Color
+		    Upper.BorderColor3 = Color
+		    BG.BorderColor3 = Color
+		    
+		    -- Check if F_line exists before setting its properties
+		    if F_line then
+		        F_line.BackgroundColor3 = Color
+		        F_line.BorderColor3 = Color
+		    else
+		        warn("F_line is not defined.")
+		    end
+		end
+		
 		AutoFit(SECTIONHOLDER,SECTION2UILIB)
 		_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 
