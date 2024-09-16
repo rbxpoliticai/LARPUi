@@ -938,6 +938,10 @@ end
 function library:Name(newName)
     WEBSITE.Text = newName or "Larp Library"
 end
+function library:Version(versionText)
+    LABEL2.Text = versionText or "1.0"
+end
+
 
 function library:AddWindow(text)
 	local sec = {}
