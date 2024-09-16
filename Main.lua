@@ -936,16 +936,22 @@ function library:Init(name)
 end
 
 function library:Settings(Name, Version, Color)
-        WEBSITE.Text = Name or "Larp Library"
-	LABEL2.Text = Version or "1.0"
-	linedecoDOWNER.BorderColor3 = Color
-	DOWNER.BorderColor3 = Color
-	linedecoupper.BackgroundColor3 = Color
-	linedecoupper.BorderColor3 = Color
-	Upper.BorderColor3 = Color
-	BG.BorderColor3 = Color
-	F_line.BackgroundColor3 = Color
-	F_line.BorderColor3 = Color
+    WEBSITE.Text = Name or "Larp Library"
+    LABEL2.Text = Version or "1.0"
+    linedecoDOWNER.BorderColor3 = Color
+    DOWNER.BorderColor3 = Color
+    linedecoupper.BackgroundColor3 = Color
+    linedecoupper.BorderColor3 = Color
+    Upper.BorderColor3 = Color
+    BG.BorderColor3 = Color
+    
+    -- Check if F_line exists before setting its properties
+    if F_line then
+        F_line.BackgroundColor3 = Color
+        F_line.BorderColor3 = Color
+    else
+        warn("F_line is not defined.")
+    end
 end
 
 function library:AddWindow(text)
