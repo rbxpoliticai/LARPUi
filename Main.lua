@@ -837,7 +837,16 @@ else
 	end)
 end
 
-
+function library:Settings(Name, Version, Color)
+	WEBSITE.Text = Name or "Larp Library"
+	LABEL2.Text = Version or "1.0"
+	linedecoDOWNER.BorderColor3 = Color
+	DOWNER.BorderColor3 = Color
+	linedecoupper.BackgroundColor3 = Color
+	linedecoupper.BorderColor3 = Color
+	Upper.BorderColor3 = Color
+	BG.BorderColor3 = Color
+end
 
 function library:AddWatermark(Text)
 	local intern = {}
@@ -1192,8 +1201,8 @@ function library:AddWindow(text)
 
 		F_line.Name = "F_line"
 		F_line.Parent = Section
-		F_line.BackgroundColor3 = Color3.fromRGB(91, 133, 197)
-		F_line.BorderColor3 = Color3.fromRGB(91, 133, 197)
+		F_line.BackgroundColor3 = linedecoupper.BorderColor3
+		F_line.BorderColor3 = linedecoupper.BorderColor3
 		F_line.BorderSizePixel = 0
 		F_line.Position = UDim2.new(0, 0, 0.099530004, 0)
 		F_line.Size = UDim2.new(1, 0, 0, 1)
@@ -2212,7 +2221,7 @@ function library:AddWindow(text)
 			TextLabel.Position = UDim2.new(0, 0, 0, 0)
 			TextLabel.Size = UDim2.new(0,243,0,19)
 			TextLabel.ZIndex = 15
-            TextLabel.Text=Text
+            		TextLabel.Text=Text
 			TextLabel.Font = Enum.Font.SourceSansBold
 			TextLabel.TextColor3 = Color3.fromRGB(84, 84, 84)
 			TextLabel.TextSize = 17.000
@@ -2267,19 +2276,6 @@ function library:AddWindow(text)
 	end
 
 	return sec
-end
-
-function library:Settings(Name, Version, Color)
-	WEBSITE.Text = Name or "Larp Library"
-	LABEL2.Text = Version or "1.0"
-	linedecoDOWNER.BorderColor3 = Color
-	DOWNER.BorderColor3 = Color
-	linedecoupper.BackgroundColor3 = Color
-	linedecoupper.BorderColor3 = Color
-	Upper.BorderColor3 = Color
-	BG.BorderColor3 = Color
-	F_line.BackgroundColor3 = Color
-	F_line.BorderColor3 = Color
 end
 
 
