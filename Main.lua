@@ -936,18 +936,6 @@ function library:Init(name)
     end
 end
 
-function library:Settings(Name, Version, Color)
-	WEBSITE.Text = Name or "Larp Library"
-	LABEL2.Text = Version or "1.0"
-	linedecoDOWNER.BorderColor3 = Color
-	DOWNER.BorderColor3 = Color
-	linedecoupper.BackgroundColor3 = Color
-	linedecoupper.BorderColor3 = Color
-	Upper.BorderColor3 = Color
-	BG.BorderColor3 = Color
-	linecolor = Color
-end
-
 function library:AddWindow(text)
 	local sec = {}
 	text=text or 'Not Def'
@@ -1204,8 +1192,8 @@ function library:AddWindow(text)
 
 		F_line.Name = "F_line"
 		F_line.Parent = Section
-		F_line.BackgroundColor3 = linecolor
-		F_line.BorderColor3 = linecolor
+		F_line.BackgroundColor3 = Color3.fromRGB(91, 133, 197)
+		F_line.BorderColor3 = Color3.fromRGB(91, 133, 197)
 		F_line.BorderSizePixel = 0
 		F_line.Position = UDim2.new(0, 0, 0.099530004, 0)
 		F_line.Size = UDim2.new(1, 0, 0, 1)
@@ -2281,7 +2269,18 @@ function library:AddWindow(text)
 	return sec
 end
 
-
+function library:Settings(Name, Version, Color)
+	WEBSITE.Text = Name or "Larp Library"
+	LABEL2.Text = Version or "1.0"
+	linedecoDOWNER.BorderColor3 = Color
+	DOWNER.BorderColor3 = Color
+	linedecoupper.BackgroundColor3 = Color
+	linedecoupper.BorderColor3 = Color
+	Upper.BorderColor3 = Color
+	BG.BorderColor3 = Color
+	F_line.BackgroundColor3 = Color
+	F_line.BorderColor3 = Color
+end
 
 
 draggable(MAIN)
