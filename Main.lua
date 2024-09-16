@@ -846,6 +846,8 @@ function library:Settings(Name, Version, Color)
 	linedecoupper.BorderColor3 = Color
 	Upper.BorderColor3 = Color
 	BG.BorderColor3 = Color
+	linedecoDOWNER.BackgroundColor3 = Color
+	linedecoDOWNER.BorderColor3 = Color
 end
 
 function library:AddWatermark(Text)
