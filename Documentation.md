@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/oShyyyyy/Plaguecheat.cc-Roblox-Ui-library/main/Source.lua", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxpoliticai/LARPUi/refs/heads/main/Main.lua", true))()
 
 
 local Legit = library:AddWindow('Legit')
