@@ -936,12 +936,20 @@ function library:Init(name)
 end
 
 function library:Name(newName)
-    WEBSITE.Text = newName or "Larp Library"
-end
-function library:Version(versionText)
-    LABEL2.Text = versionText or "1.0"
+    if WEBSITE and WEBSITE:IsA("TextLabel") then
+        WEBSITE.Text = newName or "Larp Library"
+    else
+        warn("WEBSITE TextLabel not found or invalid")
+    end
 end
 
+function library:Version(versionText)
+    if LABEL2 and LABEL2:IsA("TextLabel") then
+        LABEL2.Text = versionText or "1.0"
+    else
+        warn("LABEL2 TextLabel not found or invalid")
+    end
+end
 
 function library:AddWindow(text)
 	local sec = {}
