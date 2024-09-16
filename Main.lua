@@ -2,6 +2,7 @@ local PCR_1 = Instance.new("ScreenGui")
 local TweenService = game:GetService('TweenService');
 local uis = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
+local linecolor = Color3.fromRGB(91, 133, 197)
 
 local function createInstance(class, props)
 	local inst = Instance.new(class)
@@ -935,6 +936,18 @@ function library:Init(name)
     end
 end
 
+function library:Settings(Name, Version, Color)
+	WEBSITE.Text = Name or "Larp Library"
+	LABEL2.Text = Version or "1.0"
+	linedecoDOWNER.BorderColor3 = Color
+	DOWNER.BorderColor3 = Color
+	linedecoupper.BackgroundColor3 = Color
+	linedecoupper.BorderColor3 = Color
+	Upper.BorderColor3 = Color
+	BG.BorderColor3 = Color
+	linecolor = Color
+end
+
 function library:AddWindow(text)
 	local sec = {}
 	text=text or 'Not Def'
@@ -1191,8 +1204,8 @@ function library:AddWindow(text)
 
 		F_line.Name = "F_line"
 		F_line.Parent = Section
-		F_line.BackgroundColor3 = Color3.fromRGB(91, 133, 197)
-		F_line.BorderColor3 = Color3.fromRGB(91, 133, 197)
+		F_line.BackgroundColor3 = linecolor
+		F_line.BorderColor3 = linecolor
 		F_line.BorderSizePixel = 0
 		F_line.Position = UDim2.new(0, 0, 0.099530004, 0)
 		F_line.Size = UDim2.new(1, 0, 0, 1)
@@ -2257,25 +2270,6 @@ function library:AddWindow(text)
 			wait()
 			_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 			UpdateMainSize(nil,true)
-		end
-
-		function library:Settings(Name, Version, Color)
-		    WEBSITE.Text = Name or "Larp Library"
-		    LABEL2.Text = Version or "1.0"
-		    linedecoDOWNER.BorderColor3 = Color
-		    DOWNER.BorderColor3 = Color
-		    linedecoupper.BackgroundColor3 = Color
-		    linedecoupper.BorderColor3 = Color
-		    Upper.BorderColor3 = Color
-		    BG.BorderColor3 = Color
-		    
-		    -- Check if F_line exists before setting its properties
-		    if F_line then
-		        F_line.BackgroundColor3 = Color
-		        F_line.BorderColor3 = Color
-		    else
-		        warn("F_line is not defined.")
-		    end
 		end
 		
 		AutoFit(SECTIONHOLDER,SECTION2UILIB)
