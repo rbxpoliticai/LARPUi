@@ -947,6 +947,22 @@ function library:Init(name)
     end
 end
 
+function library:SetWindow(text)
+    for _, v in pairs(self.windows) do
+        if v:IsA('Frame') or v:IsA('ScrollingFrame') then
+            v.Visible = false
+        end
+    end
+
+    local window = self.windows[text]
+    if window then
+        window.Visible = true
+    else
+        warn("Window with text '" .. text .. "' not found.")
+    end
+end
+
+
 function library:AddWindow(text)
 	local sec = {}
 	text=text or 'Not Def'
