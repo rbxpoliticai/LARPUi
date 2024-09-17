@@ -947,20 +947,28 @@ function library:Init(name)
     end
 end
 
+
 function library:SetWindow(text)
-    for _, v in pairs(limit1) do
+    for _, v in pairs(limit1:GetChildren()) do
         if v:IsA('Frame') or v:IsA('ScrollingFrame') then
             v.Visible = false
         end
     end
 
-    local window = limit1[text]
-    if window then
-        window.Visible = true
-    else
+    local windowFound = false
+    for _, v in pairs(limit1:GetChildren()) do
+        if v:IsA('ScrollingFrame') and v.Name == text then
+            v.Visible = true
+            windowFound = true
+            break
+        end
+    end
+
+    if not windowFound then
         warn("Window with text '" .. text .. "' not found.")
     end
 end
+
 
 
 function library:AddWindow(text)
