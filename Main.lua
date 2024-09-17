@@ -957,8 +957,16 @@ function library:SetWindow(text)
 
     local windowFound = false
     for _, v in pairs(limit1:GetChildren()) do
-        if v:IsA('ScrollingFrame') and v.Name == text then
+        if v:IsA('ScrollingFrame') and v.Name == text then	
+	
             v.Visible = true
+            for i, tab in pairs(Upper:GetChildren()) do
+		if tab.Name == text then
+		    tab.TextColor3 = Color3.fromRGB(210, 210, 210)
+		else
+		    tab.TextColor3 = Color3.fromRGB(138, 138, 138)
+            	end
+            end
             windowFound = true
             break
         end
