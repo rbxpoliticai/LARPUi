@@ -948,13 +948,13 @@ function library:Init(name)
 end
 
 function library:SetWindow(text)
-    for _, v in pairs(self.windows) do
+    for _, v in pairs(limit1) do
         if v:IsA('Frame') or v:IsA('ScrollingFrame') then
             v.Visible = false
         end
     end
 
-    local window = self.windows[text]
+    local window = limit1[text]
     if window then
         window.Visible = true
     else
