@@ -961,7 +961,7 @@ function library:SetWindow(text)
 	
             v.Visible = true
             for i, tab in pairs(Upper:GetChildren()) do
-		if tab.Name == text then
+		if tab.Name == text and tab.ClassName == "TextButton" then
 		    tab.TextColor3 = Color3.fromRGB(210, 210, 210)
 		else
 		    tab.TextColor3 = Color3.fromRGB(138, 138, 138)
