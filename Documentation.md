@@ -41,7 +41,7 @@ Home:AddLabel("Template Label")
 
 ## Creating a Button
 ```lua
-Home:AddButton("Test Button", false, nil, function() 
+Home:AddButton("Test Button", function() 
   print("a") 
 end)
 ```
