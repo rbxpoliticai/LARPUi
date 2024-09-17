@@ -154,6 +154,15 @@ Home:AddSeparateBar()
 
 ---
 
+## Set Window
+```lua
+library:SetWindow("Legit")
+```
+
+- **SetWindow** sets the window when the UI is loaded.
+
+---
+
 ## Adding a Watermark
 ```lua
 local watermark = Library:AddWatermark("")
