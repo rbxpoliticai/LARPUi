@@ -957,16 +957,19 @@ function library:SetWindow(text)
 
     local windowFound = false
     for _, v in pairs(limit1:GetChildren()) do
-        if v:IsA('ScrollingFrame') and v.Name == text then	
-	
+        if v:IsA('ScrollingFrame') and v.Name == text then
             v.Visible = true
-            for i, tab in pairs(Upper:GetChildren()) do
-		if tab.ClassName == "TextButton" and tab.Name == text then
-		    tab.TextColor3 = Color3.fromRGB(210, 210, 210)
-		else
-		    tab.TextColor3 = Color3.fromRGB(138, 138, 138)
-            	end
+            
+            for _, tab in pairs(Upper:GetChildren()) do
+                if tab:IsA('TextButton') then
+                    if tab.Name == text then
+                        tab.TextColor3 = Color3.fromRGB(210, 210, 210)
+                    else
+                        tab.TextColor3 = Color3.fromRGB(138, 138, 138)
+                    end
+                end
             end
+            
             windowFound = true
             break
         end
@@ -976,7 +979,6 @@ function library:SetWindow(text)
         warn("Window with text '" .. text .. "' not found.")
     end
 end
-
 
 
 function library:AddWindow(text)
