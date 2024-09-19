@@ -2276,7 +2276,7 @@ function library:AddWindow(text)
 		    TextLabel.ZIndex = 15
 		    TextLabel.Text = Text
 		    TextLabel.Font = Enum.Font.SourceSansBold
-		    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		    TextLabel.TextColor3 = Color3.fromRGB(197, 197, 197)
 		    TextLabel.TextSize = 17.000
 		
 		    Interactive.Name = "Interactive"
