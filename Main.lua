@@ -882,7 +882,7 @@ function library:AddWatermark(Text)
 	obj3.ZIndex = 7
 	obj3.Name = [[MAIN]]
 
-	--[TextLabel]--
+	--[Text]--
 	local obj4 = Instance.new("TextLabel", obj3)
 	obj4.BackgroundColor3 = Color3.new(1, 1, 1)
 	obj4.BackgroundTransparency = 1
@@ -946,7 +946,6 @@ function library:Init(name)
         end
     end
 end
-
 
 function library:SetWindow(text)
     for _, v in pairs(limit1:GetChildren()) do
@@ -1659,6 +1658,13 @@ function library:AddWindow(text)
 			wait()
 			_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 			UpdateMainSize(nil,true)
+
+			function TextLabel:ChangeText(text)
+				local size = #text * 7 + 5
+				obj4.Text = text;
+				Text = text
+				obj1.Size = UDim2.new(0, size, 0, 28)
+			end
 		end
 		local function getsize(str)
 			local r = 0;
@@ -2311,6 +2317,13 @@ function library:AddWindow(text)
 		_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 
 		return inside
+	end
+
+	function TextLabel:ChangeText(text)
+		local size = #text * 7 + 5
+		obj4.Text = text;
+		Text = text
+		obj1.Size = UDim2.new(0, size, 0, 28)
 	end
 
 	return sec
