@@ -166,5 +166,13 @@ Library:SetWindow("Legit")
 ## Adding a Watermark
 ```lua
 local watermark = Library:AddWatermark("")
-watermark:ChangeText("Watermark Text")
 ```
+
+---
+
+## Change Text
+```lua
+Path:ChangeText("Watermark Text")
+```
+
+- **ChangeText** changes text of selected path for Labels, Watermark, or dropdowns.
