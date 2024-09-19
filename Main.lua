@@ -2310,6 +2310,7 @@ function library:AddWindow(text)
 		
 		    Interactive.MouseButton1Click:Connect(function()
 		        pcall(function()
+			    AddRipple(Interactive,TextLabel)
 		            Callback()
 		        end)
 		    end)
