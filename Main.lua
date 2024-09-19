@@ -1661,9 +1661,9 @@ function library:AddWindow(text)
 
 			function TextLabel:ChangeText(text)
 				local size = #text * 7 + 5
-				obj4.Text = text;
+				TextLabel.Text = text
 				Text = text
-				obj1.Size = UDim2.new(0, size, 0, 28)
+				TextLabel.Size = UDim2.new(0, size, 0, 28)
 			end
 		end
 		local function getsize(str)
@@ -2321,9 +2321,9 @@ function library:AddWindow(text)
 
 	function TextLabel:ChangeText(text)
 		local size = #text * 7 + 5
-		obj4.Text = text;
+		TextLabel.Text = text;
 		Text = text
-		obj1.Size = UDim2.new(0, size, 0, 28)
+		TextLabel.Size = UDim2.new(0, size, 0, 28)
 	end
 
 	return sec
