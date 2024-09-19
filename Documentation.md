@@ -165,14 +165,14 @@ Library:SetWindow("Legit")
 
 ## Adding a Watermark
 ```lua
-local watermark = Library:AddWatermark("")
+local Watermark = Library:AddWatermark("LarpUi")
 ```
 
 ---
 
 ## Change Text
 ```lua
-Path:ChangeText("Watermark Text")
+Path:ChangeText("Example")
 ```
 
 - **ChangeText** changes text of selected path for Labels, Watermark, or dropdowns.
