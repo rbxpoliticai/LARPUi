@@ -2276,7 +2276,7 @@ function library:AddWindow(text)
 		    TextLabel.ZIndex = 15
 		    TextLabel.Text = Text
 		    TextLabel.Font = Enum.Font.SourceSansBold
-		    TextLabel.TextColor3 = Color3.fromRGB(84, 84, 84)
+		    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 		    TextLabel.TextSize = 17.000
 		
 		    Interactive.Name = "Interactive"
@@ -2310,10 +2310,11 @@ function library:AddWindow(text)
 		
 		    Interactive.MouseButton1Click:Connect(function()
 		        pcall(function()
-			    AddRipple(Interactive,TextLabel,Color3.fromRGB(180, 180, 180))
 		            Callback()
 		        end)
 		    end)
+
+		    AddRipple(Interactive,TextLabel,Color3.fromRGB(180, 180, 180))
 		
 		    SECTIONHOLDER.Size = UDim2.fromOffset(SECTIONHOLDER.AbsoluteSize.X,  SECTION2UILIB.AbsoluteContentSize.Y + 8) + UDim2.new(0,0,0,23)
 		    _PARENT.Size = UDim2.new(_PARENT.Size.X.Scale, _PARENT.Size.X.Offset , 0 ,LIST.AbsoluteContentSize.Y + 15)
