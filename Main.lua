@@ -1659,12 +1659,9 @@ function library:AddWindow(text)
 			_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 			UpdateMainSize(nil,true)
 
-			function TextLabel:ChangeText(text)
-				local size = #text * 7 + 5
-				TextLabel.Text = text
-				Text = text
-				TextLabel.Size = UDim2.new(0, size, 0, 28)
-			end
+		    function TextLabel:ChangeText(text)
+		        TextLabel.Text = text
+		    end
 		end
 		local function getsize(str)
 			local r = 0;
@@ -2239,6 +2236,10 @@ function library:AddWindow(text)
 			wait()
 			_PARENT:TweenSize(UDim2.fromOffset(_PARENT.AbsoluteSize.X,  LIST.AbsoluteContentSize.Y + 15),Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0, true) 
 			UpdateMainSize(nil,true)
+
+			function TextLabel:ChangeText(text)
+		        	TextLabel.Text = text
+		    	end
 		end
 		function inside:AddButton(Text, Callback)
 		    Callback = Callback or function() end
@@ -2318,14 +2319,6 @@ function library:AddWindow(text)
 
 		return inside
 	end
-
-	function TextLabel:ChangeText(text)
-		local size = #text * 7 + 5
-		TextLabel.Text = text;
-		Text = text
-		TextLabel.Size = UDim2.new(0, size, 0, 28)
-	end
-
 	return sec
 end
 
