@@ -870,7 +870,7 @@ function library:AddWatermark(Text)
 	obj1.Parent = PCR_1
 	--[UIStroke]--
 	local obj2 = Instance.new("UIStroke", obj1)
-	obj2.Color = Color3.new(0.309804, 0.458824, 0.67451)
+	obj2.Color = linedecoDOWNER.BackgroundColor3
 
 	--[MAIN]--
 	local obj3 = Instance.new("Frame", obj1)
